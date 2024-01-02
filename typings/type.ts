@@ -7,3 +7,19 @@ export type FileType = {
   fullName: string;
   timeStamp: string;
 };
+
+export interface FileInitialState {
+  fileId: string;
+  fileName: string;
+  isDeleteModalOpen: boolean;
+  isRenameModalOpen: boolean;
+}
+
+export interface RenameState {
+  fileName: string;
+  isOpen: boolean;
+}
+
+export interface RootState {
+  file: FileInitialState;
+}

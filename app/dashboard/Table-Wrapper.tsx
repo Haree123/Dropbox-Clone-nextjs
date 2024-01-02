@@ -6,7 +6,7 @@ import { Button } from "@/components/ui/button";
 import { useUser } from "@clerk/nextjs";
 import { FileType } from "@/typings/type";
 import { Skeleton } from "@/components/ui/skeleton";
-import { DataTable } from "@/components/Data-Table";
+import { DataTable } from "@/app/dashboard/Data-Table";
 import { TableColumns } from "./Table-Columns";
 import { useCollection } from "react-firebase-hooks/firestore";
 import { collection, orderBy, query } from "firebase/firestore";
