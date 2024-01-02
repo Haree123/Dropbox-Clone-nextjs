@@ -17,7 +17,9 @@ const Dashboard = async () => {
     fileSize: doc.data().fileSize,
     fileType: doc.data().fileType,
     fullName: doc.data().fullName,
-    timeStamp: format(doc.data().timestamp.toDate(), "dd-MM-yyyy hh:mm a"),
+    timeStamp:doc.data().timestamp
+    ? format(doc.data().timestamp?.toDate(), "dd-MM-yyyy hh:mm a")
+    : "",
     downloadURL: doc.data().downloadURL,
   }));
 

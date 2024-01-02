@@ -1,4 +1,5 @@
 export type FileType = {
+  id: string;
   downloadURL: string;
   fileName: string;
   fileType: string;
