@@ -1,12 +1,13 @@
 import Image from "next/image";
+import Link from "next/link";
 import { ThemeToggler } from "./Theme-Toggler";
 import { SignInButton, SignedIn, SignedOut, UserButton } from "@clerk/nextjs";
 
 const Header = () => {
   return (
-    <header>
+    <header className="border-b">
       <div className="flex justify-between items-center">
-        <div className="flex items-center space-x-1">
+        <div className="flex items-center space-x-2">
           <div className="bg-[#0160FE]">
             <Image
               className="invert"
@@ -17,7 +18,9 @@ const Header = () => {
               loading="lazy"
             />
           </div>
-          <h3 className="font-bold text-xl">Dropbox</h3>
+          <Link href="/" className="font-bold text-xl">
+            Dropbox
+          </Link>
         </div>
 
         <div className="flex px-2 items-center space-x-4">

@@ -1,6 +1,5 @@
-import { ArrowRight } from "lucide-react";
-import Image from "next/image";
 import Link from "next/link";
+import { ArrowRight } from "lucide-react";
 
 export default function Home() {
   return (
@@ -36,7 +35,7 @@ export default function Home() {
             <source
               src="https://aem.dropbox.com/cms/content/dam/dropbox/warp/en-us/overview/lp-header-graphite200-1920x1080.mp4"
               type="video/mp4"
-            />{" "}
+            />
             Your Browser does not support the video tag.
           </video>
         </div>
@@ -45,13 +44,12 @@ export default function Home() {
       <div className="mt-5">
         <p className="text-center">
           <b>Disclaimer</b>
-          <p className="mx-2 my-3 text-sm">
-            This Video is made for learning and building my portfolio. We do not
-            own or affiliate with Dropbox or/and of its subsidiaries in any
-            form. Copyright Disclaimer under section 107 of the Copyright Act
-            1976, allowance is made for "fair use" of this video for educational
-            purposes.
-          </p>
+        </p>
+        <p className="mx-12 my-3 text-sm">
+          This Video is made for learning and building my portfolio. We do not
+          own or affiliate with Dropbox or/and of its subsidiaries in any form.
+          Copyright Disclaimer under section 107 of the Copyright Act 1976,
+          allowance is made for fair use of this video for educational purposes.
         </p>
       </div>
     </main>
