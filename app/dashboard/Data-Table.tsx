@@ -88,24 +88,29 @@ export function DataTable<TData, TValue>({
                 <DeleteModal />
                 <RenameModal />
 
-                {row.getVisibleCells().map((cell) => (
-                  <TableCell key={cell.id}>
-                    {cell.column.id === "fileName" ? (
-                      <div
-                        className="flex space-x-2 justify-center items-center underline text-blue-500 hover:cursor-pointer"
-                        onClick={() => {
-                          const rowObj = row.original as FileType;
-                          renameFile(rowObj.id, rowObj.fileName);
-                        }}
-                      >
-                        <p>{cell.getValue() as string}</p>
-                        <PencilIcon size="15" />
-                      </div>
-                    ) : (
-                      flexRender(cell.column.columnDef.cell, cell.getContext())
-                    )}
-                  </TableCell>
-                ))}
+                {row.getVisibleCells().map((cell) => {
+                  const rowObj = row.original as FileType;
+                  return (
+                    <TableCell key={cell.id}>
+                      {cell.column.id === "fileName" ? (
+                        <div
+                          className="flex space-x-2 justify-center items-center underline text-blue-500 hover:cursor-pointer"
+                          onClick={() => {
+                            renameFile(rowObj.id, rowObj.fileName);
+                          }}
+                        >
+                          <p>{cell.getValue() as string}</p>
+                          <PencilIcon size="15" />
+                        </div>
+                      ) : (
+                        flexRender(
+                          cell.column.columnDef.cell,
+                          cell.getContext()
+                        )
+                      )}
+                    </TableCell>
+                  );
+                })}
 
                 <TableCell>
                   <Button
@@ -115,7 +120,7 @@ export function DataTable<TData, TValue>({
                       deleteFile(rowObj.id);
                     }}
                   >
-                    <TrashIcon />
+                    <TrashIcon size={15} />
                   </Button>
                 </TableCell>
               </TableRow>
@@ -123,7 +128,7 @@ export function DataTable<TData, TValue>({
           ) : (
             <TableRow>
               <TableCell colSpan={columns.length} className="h-24 text-center">
-                No results.
+                No files were uploaded.
               </TableCell>
             </TableRow>
           )}

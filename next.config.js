@@ -6,6 +6,10 @@ const nextConfig = {
         protocol: "https",
         hostname: "www.shareicon.net",
       },
+      {
+        protocol: "https",
+        hostname: "fjord.dropboxstatic.com",
+      },
     ],
   },
 };

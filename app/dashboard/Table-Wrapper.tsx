@@ -48,18 +48,22 @@ const TableWrapper = ({ skeletonFiles }: { skeletonFiles: FileType[] }) => {
         <p className="font-bold text-md">All Files</p>
 
         {docs?.docs.length === undefined ? (
-          <Button className="w-36" variant="outline">
-            <Skeleton className="h-5 w-full" />
-          </Button>
+          <div className="flex space-x-3">
+            <Button className="w-36" variant="outline">
+              <Skeleton className="h-5 w-full" />
+            </Button>
+          </div>
         ) : (
-          <Button
-            variant="outline"
-            onClick={() => {
-              setSort(sort === "asc" ? "desc" : "asc");
-            }}
-          >
-            Sort By {sort === "asc" ? "Oldest" : "Newest"}
-          </Button>
+          <div className="flex space-x-3">
+            <Button
+              variant="outline"
+              onClick={() => {
+                setSort(sort === "asc" ? "desc" : "asc");
+              }}
+            >
+              Sort By {sort === "asc" ? "Oldest" : "Newest"}
+            </Button>
+          </div>
         )}
       </div>
 

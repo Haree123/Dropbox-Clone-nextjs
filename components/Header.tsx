@@ -5,7 +5,7 @@ import { SignInButton, SignedIn, SignedOut, UserButton } from "@clerk/nextjs";
 
 const Header = () => {
   return (
-    <header className="border-b">
+    <header>
       <div className="flex justify-between items-center">
         <div className="flex items-center space-x-2">
           <div className="bg-[#0160FE]">

@@ -2,7 +2,7 @@ import { db } from "../firebase/config";
 import { auth } from "@clerk/nextjs";
 import { format } from "date-fns";
 import { FileType } from "@/typings/type";
-import { collection, getDocs } from "firebase/firestore";
+import { collection, getDocs, } from "firebase/firestore";
 import Dropzone from "./Dropzone";
 import TableWrapper from "./Table-Wrapper";
 
@@ -17,9 +17,9 @@ const Dashboard = async () => {
     fileSize: doc.data().fileSize,
     fileType: doc.data().fileType,
     fullName: doc.data().fullName,
-    timeStamp:doc.data().timestamp
-    ? format(doc.data().timestamp?.toDate(), "dd-MM-yyyy hh:mm a")
-    : "",
+    timeStamp: doc.data().timestamp
+      ? format(doc.data().timestamp?.toDate(), "dd-MM-yyyy hh:mm a")
+      : "",
     downloadURL: doc.data().downloadURL,
   }));
 

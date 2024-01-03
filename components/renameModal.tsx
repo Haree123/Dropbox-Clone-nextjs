@@ -82,10 +82,9 @@ export function RenameModal() {
         <div className="flex items-center space-x-2">
           <div className="grid flex-1 gap-2">
             <Label htmlFor="link" className="sr-only">
-              Link
+              Rename File
             </Label>
             <Input
-              id="link"
               value={inputValue}
               onChange={(e) => {
                 setInputValue(e.target.value);
