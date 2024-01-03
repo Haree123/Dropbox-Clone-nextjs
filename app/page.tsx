@@ -50,7 +50,7 @@ export default function Home() {
             <p className="font-bold text-3xl">1B+</p>
             <p className="font-bold text-2xl mt-5">mobile app downloads</p>
             <p className="text-sm mt-5">
-              with Editors' Choice Awards from the Google Play and Apple App
+              with Editors Choice Awards from the Google Play and Apple App
               Store.
             </p>
           </div>
